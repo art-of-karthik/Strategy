@@ -1,0 +1,24 @@
+<div class="categories">
+
+    <div>
+        <mat-card class="example-card" *ngFor="let so of strategyOptions">
+            <div mat-card-avatar class="example-header-image">
+                <span class="material-symbols-outlined">
+                    currency_rupee
+                </span>
+            </div>
+            <mat-card-header>
+                <mat-card-title>{{so.title}}</mat-card-title>
+            </mat-card-header>
+           
+            <mat-card-content>
+                <p>
+                    {{so.description}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions [align]="'end'">
+                <button mat-button (click)="onClickExplore(so.exploreOption)">Explore</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
